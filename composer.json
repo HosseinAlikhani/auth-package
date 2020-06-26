@@ -1,0 +1,17 @@
+{
+  "name": "d3cr33/login",
+  "description": "simple authentication",
+  "keywords": [],
+  "license": "MIT",
+  "authors": [{
+    "name": "Hossein Alikhani",
+    "email": "poshtiban.esteam@gmail.com"
+  }],
+  "require": {},
+  "autoload": {
+    "psr-4": {
+      "D3CR33\\Auth\\": "src/"
+    },
+
+  }
+}
