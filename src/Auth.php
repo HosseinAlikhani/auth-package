@@ -25,7 +25,7 @@ class Auth
         $defaultOptions = [
             'namespace' =>  '\D3CR33\Auth\Http\Controllers',
             'prefix'    =>  '',
-            'middleware'    =>  ['web', 'throttle:600:1']
+            'middleware'    =>  ['web']
         ];
 
         $options = array_merge($defaultOptions, $options);
