@@ -29,5 +29,12 @@ class RouteRegister
                 $router->post('', 'LoginController@login')->name('post.login');
             }
         );
+        $this->router->group(
+            ['prefix'   =>  'register', 'middleware'    =>  []],
+            function($router) {
+                $router->get('', 'RegisterController@getRegister')->name('get.register');
+                $router->post('', 'RegisterController@register')->name('post.register');
+            }
+        );
     }
 }
