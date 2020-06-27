@@ -23,9 +23,10 @@ class RouteRegister
     public function all()
     {
         $this->router->group(
-            ['prefix'   =>  '', 'middleware'    =>  ['web', 'throttle:600:1']],
+            ['prefix'   =>  'login', 'middleware'    =>  []],
             function($router) {
-                $router->get('login', 'AuthController@login');
+                $router->get('', 'LoginController@getLogin')->name('get.login');
+                $router->post('', 'LoginController@login')->name('post.login');
             }
         );
     }
