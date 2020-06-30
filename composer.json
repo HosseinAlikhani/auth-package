@@ -15,5 +15,6 @@
     "psr-4": {
       "D3CR33\\Auth\\": "src/"
     }
-  }
+  },
+  "minimum-stability": "dev"
 }
