@@ -36,5 +36,12 @@ class RouteRegister
                 $router->post('', 'RegisterController@register')->name('post.register');
             }
         );
+        $this->router->group(
+            ['prefix'   =>  'reset-password', 'middleware'    =>  []],
+            function($router) {
+                $router->get('', 'ResetPasswordController@getResetPassword')->name('get.resetpassword');
+                $router->patch('', 'ResetPasswordController@resetPassword')->name('post.resetpassword');
+            }
+        );
     }
 }
