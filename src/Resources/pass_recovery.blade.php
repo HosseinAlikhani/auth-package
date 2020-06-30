@@ -1,4 +1,4 @@
-@extends('auth.layout.app')
+@extends('Auth::layout.app')
 
 @section('css')
     <link href="/src/auth/assets/css/authentication/form-1.css" rel="stylesheet" type="text/css" />
