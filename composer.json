@@ -7,7 +7,10 @@
     "name": "Hossein Alikhani",
     "email": "poshtiban.esteam@gmail.com"
   }],
-  "require": {},
+  "require": {
+    "php": ">=7.0",
+  },
+  "require-dev": {},
   "autoload": {
     "psr-4": {
       "D3CR33\\Auth\\": "src/"
