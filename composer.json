@@ -1,5 +1,5 @@
 {
-  "name": "d3cr33/auth",
+  "name": "dcr/auth",
   "description": "simple authentication",
   "keywords": ["D3CR33", "Authentication"],
   "type": "package",
