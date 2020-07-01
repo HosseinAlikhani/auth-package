@@ -2,6 +2,7 @@
   "name": "d3cr33/auth",
   "description": "simple authentication",
   "keywords": ["D3CR33", "Authentication"],
+  "type": "project",
   "license": "MIT",
   "authors": [{
     "name": "Hossein Alikhani",
