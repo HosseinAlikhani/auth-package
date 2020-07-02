@@ -1,3 +1,4 @@
-D3CR33 Authentication Package
+D3CR33 Authentication
 =========================
+### simple authentication package for laravel
 
