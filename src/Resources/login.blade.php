@@ -13,7 +13,7 @@
                             </div>
                         @endif
                     <h1 class="">Log In to <a href="index-2.html"><span class="brand-name"> Account </span></a></h1>
-                    <p class="signup-link">New Here? <a href="{{ route('get.register') }}">Create an account</a></p>
+                    <p class="signup-link">New Here? <a href="{{ route('register') }}">Create an account</a></p>
                     <form class="text-left" method="POST" action="{{ route('post.login') }}">
                         @csrf
                         <div class="form">
