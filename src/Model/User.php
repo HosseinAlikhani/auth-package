@@ -5,10 +5,11 @@ namespace D3CR33\Auth\Base\Model;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Spatie\Permission\Traits\HasRoles;
 
 class User extends Authenticatable
 {
-    use Notifiable;
+    use Notifiable, HasRoles;
     protected $guarded = ['id'];
     /**
      * The attributes that should be hidden for arrays.
