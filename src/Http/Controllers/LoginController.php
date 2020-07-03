@@ -38,7 +38,7 @@ class LoginController extends BaseController
     public function login()
     {
         return $this->checkAttempt() ?
-            redirect()->intended('dashboard') :
+            redirect()->intended('panel') :
             redirect()->route('get.login')->with('message', 'The information entered is incorrect');
     }
 
