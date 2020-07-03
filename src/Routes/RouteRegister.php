@@ -25,21 +25,21 @@ class RouteRegister
         $this->router->group(
             ['prefix'   =>  'login', 'middleware'    =>  []],
             function($router) {
-                $router->get('', 'LoginController@getLogin')->name('get.login');
+                $router->get('', 'LoginController@getLogin')->name('login');
                 $router->post('', 'LoginController@login')->name('post.login');
             }
         );
         $this->router->group(
             ['prefix'   =>  'register', 'middleware'    =>  []],
             function($router) {
-                $router->get('', 'RegisterController@getRegister')->name('get.register');
+                $router->get('', 'RegisterController@getRegister')->name('register');
                 $router->post('', 'RegisterController@register')->name('post.register');
             }
         );
         $this->router->group(
             ['prefix'   =>  'reset-password', 'middleware'    =>  []],
             function($router) {
-                $router->get('', 'ResetPasswordController@getResetPassword')->name('get.resetpassword');
+                $router->get('', 'ResetPasswordController@getResetPassword')->name('resetpassword');
                 $router->patch('', 'ResetPasswordController@resetPassword')->name('post.resetpassword');
             }
         );
