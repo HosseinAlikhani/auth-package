@@ -2,4 +2,4 @@ D3CR33 Authentication
 =========================
 ### simple authentication package for laravel
 
-##### dev versionss
+##### dev master
