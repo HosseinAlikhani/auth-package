@@ -16,7 +16,7 @@ class AuthServiceProvider extends ServiceProvider
         $this->loadMigrationsFrom(__DIR__ . '/Database/Migrations');
         $this->publishes([
             __DIR__ . '/Public'    =>  public_path('src'),
-        ], 'public');
+        ], 'auth');
     }
 
     public function register()
