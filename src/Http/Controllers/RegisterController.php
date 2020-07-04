@@ -42,7 +42,7 @@ class RegisterController extends BaseController
     {
         return $this->create($this->variable()) ?
             redirect()->route('dashboard') :
-            redirect()->route('get.register')->with('message',
+            redirect()->route('register')->with('message',
                 'We have made a mistake in your registration - please reapply');
     }
 
