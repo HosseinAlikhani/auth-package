@@ -14,7 +14,7 @@
                         </div>
                     @endif
                     <h1 class="">Get started with a <br/> free account</h1>
-                    <p class="signup-link">Already have an account? <a href="{{ route('get.login') }}">Log in</a></p>
+                    <p class="signup-link">Already have an account? <a href="{{ route('login') }}">Log in</a></p>
                     <form class="text-left" method="POST" action="{{ route('post.register') }}">
                        @csrf
                         <div class="form">
