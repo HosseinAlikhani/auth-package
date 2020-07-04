@@ -41,7 +41,7 @@ class RegisterController extends BaseController
     public function register()
     {
         return $this->create($this->variable()) ?
-            redirect()->route('dashboard') :
+            redirect()->route('panel') :
             redirect()->route('register')->with('message',
                 'We have made a mistake in your registration - please reapply');
     }
