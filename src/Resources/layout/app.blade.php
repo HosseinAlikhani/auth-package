@@ -8,7 +8,6 @@
     <title> D3CR33 / Login Page </title>
     <link rel="icon" type="image/x-icon" href="{{ asset('/src/auth/assets/img/favicon.ico') }}"/>
     <!-- BEGIN GLOBAL MANDATORY STYLES -->
-    <link href="{{ asset('/src/auth/fonts.googleapis.com/cssa1f9.css?family=Quicksand:400,500,600,700&amp;display=swap') }}" rel="stylesheet">
     <link href="{{ asset('/src/auth/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
     <link href="{{ asset('/src/auth/assets/css/plugins.css') }}" rel="stylesheet" type="text/css" />
     <!-- END GLOBAL MANDATORY STYLES -->
