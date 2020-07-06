@@ -13,7 +13,7 @@
                             </div>
                         @endif
                     <h1 class=""> {{ __('Auth-Lang::trans.LogInToAccount') }} </h1>
-                    <p class="signup-link">{{ __('Auth-Lang::trans.NewHere') }}? <a href="{{ route('register') }}">{{ __('Auth-Lang::trans.CreateAnAccount') }}</a></p>
+                    <p class="signup-link">{{ __('Auth-Lang::trans.NewHere') }} <a href="{{ route('register') }}">{{ __('Auth-Lang::trans.CreateAnAccount') }}</a></p>
                     <form class="text-left" method="POST" action="{{ route('post.login') }}">
                         @csrf
                         <div class="form">
@@ -50,7 +50,7 @@
                             </div>
 
                             <div class="field-wrapper">
-                                <a href="auth_pass_recovery.html" class="forgot-pass-link">{{ __('Auth-Lang::trans.ForgotPassword') }}?</a>
+                                <a href="auth_pass_recovery.html" class="forgot-pass-link">{{ __('Auth-Lang::trans.ForgotPassword') }}</a>
                             </div>
 
                         </div>
