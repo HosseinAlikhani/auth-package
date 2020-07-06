@@ -1,4 +1,4 @@
-@import url('main.css');
+@import url('https://cdn.fontcdn.ir/Font/Persian/Shabnam/Shabnam.css');
 @import url('../../plugins/perfect-scrollbar/perfect-scrollbar.css');
 @import url('structure.css');
 /*
@@ -10,3 +10,7 @@
 
 */
 @import '../../plugins/highlight/styles/monokai-sublime.css';
+
+body{
+    font-family: Shabnam;
+}
