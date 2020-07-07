@@ -4,12 +4,12 @@ namespace D3CR33\Auth\Http\Controllers;
 
 use D3CR33\Auth\Base\Controllers\BaseController;
 use D3CR33\Auth\Base\Model\User;
-use D3CR33\Auth\Http\Request\ResetPasswordRequest;
+use Illuminate\Http\Request;
 
 
 class ResetPasswordController extends BaseController
 {
-    public function __construct(ResetPasswordRequest $request, User $user)
+    public function __construct(Request $request, User $user)
     {
         $this->request = $request;
         $this->model = $user;
