@@ -3,7 +3,7 @@
 namespace D3CR33\Auth\Http\Controllers;
 
 use D3CR33\Auth\Base\Controllers\BaseController;
-use D3CR33\Auth\Http\Request\LoginRequest;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
 /**
@@ -15,9 +15,9 @@ class LoginController extends BaseController
     /**
      * LoginController constructor.
      *
-     * @param  LoginRequest  $request
+     * @param  Request  $request
      */
-    public function __construct(LoginRequest $request)
+    public function __construct(Request $request)
     {
         $this->request = $request;
     }
