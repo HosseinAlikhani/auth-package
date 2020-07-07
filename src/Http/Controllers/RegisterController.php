@@ -4,8 +4,9 @@ namespace D3CR33\Auth\Http\Controllers;
 
 use D3CR33\Auth\Base\Controllers\BaseController;
 use D3CR33\Auth\Base\Model\User;
-use D3CR33\Auth\Http\Request\RegisterRequest;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Validator;
 
 /**
  * Class RegisterController
@@ -16,10 +17,10 @@ class RegisterController extends BaseController
     /**
      * RegisterController constructor.
      *
-     * @param  RegisterRequest  $request
+     * @param  Request  $request
      * @param  User  $user
      */
-    public function __construct(RegisterRequest $request, User $user)
+    public function __construct(Request $request, User $user)
     {
         $this->request = $request;
         $this->model   = $user;
@@ -40,10 +41,14 @@ class RegisterController extends BaseController
      */
     public function register()
     {
+        $this->validator();
         return $this->create($this->variable()) ?
-            redirect()->route('panel') :
-            redirect()->route('register')->with('message',
-                'We have made a mistake in your registration - please reapply');
+            redirect()
+                ->route('login')
+                ->with('message', __('Auth-Lang::trans.message.RegisterSuccessfully')) :
+            redirect()
+                ->route('register')
+                ->with('message', __('Auth-Lang::trans.message.RegisterError'));
     }
 
     /**
@@ -57,6 +62,48 @@ class RegisterController extends BaseController
             'lname'    => $this->request->lname,
             'email'    => $this->request->email,
             'password' => Hash::make($this->request->password),
+        ];
+    }
+
+    /**
+     * @param $request
+     *
+     * @return \Illuminate\Contracts\Validation\Validator
+     */
+    public function validator()
+    {
+        $rule = [
+            'fname' =>  'required',
+            'lname' =>  'required',
+            'email' =>  'required',
+            'password'  =>  'required|confirmed',
+        ];
+        $this->request->validate($rule, $this->message(),$this->attributes());
+    }
+
+    /**
+     * set custom message for validation
+     * @return array
+     */
+    public function message()
+    {
+        return [
+            'required'  =>  __('Auth-Lang::validation.required'),
+            'confirmed'  => __('Auth-Lang::validation.confirmed'),
+        ];
+    }
+
+    /**
+     * set custom
+     * @return array
+     */
+    public function attributes()
+    {
+        return [
+            'fname' =>  __('Auth-Lang::validation.attributes.fname'),
+            'lname' =>  __('Auth-Lang::validation.attributes.lname'),
+            'email' =>  __('Auth-Lang::validation.attributes.email'),
+            'password'  =>  __('Auth-Lang::validation.attributes.password'),
         ];
     }
 }
