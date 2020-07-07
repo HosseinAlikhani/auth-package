@@ -29,6 +29,7 @@ class RouteRegister
                 $router->post('', 'LoginController@login')->name('post.login');
             }
         );
+        $this->router->get('logout', 'LoginController@logout')->name('logout');
         $this->router->group(
             ['prefix'   =>  'register', 'middleware'    =>  []],
             function($router) {
