@@ -49,9 +49,9 @@
                                 </div>
                             </div>
 
-                            <div class="field-wrapper">
-                                <a href="auth_pass_recovery.html" class="forgot-pass-link">{{ __('Auth-Lang::trans.ForgotPassword') }}</a>
-                            </div>
+{{--                            <div class="field-wrapper">--}}
+{{--                                <a href="auth_pass_recovery.html" class="forgot-pass-link">{{ __('Auth-Lang::trans.ForgotPassword') }}</a>--}}
+{{--                            </div>--}}
 
                         </div>
                     </form>
