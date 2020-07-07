@@ -43,6 +43,14 @@ class LoginController extends BaseController
     }
 
     /**
+     *logout user from session
+     */
+    public function logout()
+    {
+        Auth::logout();
+    }
+
+    /**
      * return username & password
      * @return array
      */
