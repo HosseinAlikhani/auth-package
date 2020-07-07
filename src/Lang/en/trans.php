@@ -21,5 +21,7 @@ return [
     'GetStarted'    =>  'Get Started',
     'message' =>  [
         'IncorrectData' =>  'The information entered is incorrect',
+        'RegisterError' =>  'We have trouble creating an account - please try again',
+        'RegisterSuccessfully' =>  'Your registration has been successfully registered',
     ]
 ];
