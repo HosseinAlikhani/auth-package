@@ -13,6 +13,13 @@
                             {{ Session::get('message') }}
                         </div>
                     @endif
+                    @if ($errors->any())
+                        <div class="alert alert-danger">
+                            <ul>
+                                {{ $errors->first() }}
+                            </ul>
+                        </div>
+                    @endif
                     <h1 class=""> {{ __('Auth-Lang::trans.GetStartWithAFreeAccount') }} </h1>
                     <p class="signup-link"> {{ __('Auth-Lang::trans.AlreadyHaveAnAccount') }} <a href="{{ route('login') }}"> {{ __('Auth-Lang::trans.LogIn') }} </a></p>
                     <form class="text-left" method="POST" action="{{ route('post.register') }}">
