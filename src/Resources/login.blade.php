@@ -40,14 +40,14 @@
 
                             </div>
 
-                            <div class="field-wrapper text-center keep-logged-in">
-                                <div class="n-chk new-checkbox checkbox-outline-primary">
-                                    <label class="new-control new-checkbox checkbox-outline-primary">
-                                        <input type="checkbox" class="new-control-input">
-                                        <span class="new-control-indicator"></span>{{ __('Auth-Lang::trans.KeepMeLoggedIn') }}
-                                    </label>
-                                </div>
-                            </div>
+{{--                            <div class="field-wrapper text-center keep-logged-in">--}}
+{{--                                <div class="n-chk new-checkbox checkbox-outline-primary">--}}
+{{--                                    <label class="new-control new-checkbox checkbox-outline-primary">--}}
+{{--                                        <input type="checkbox" class="new-control-input">--}}
+{{--                                        <span class="new-control-indicator"></span>{{ __('Auth-Lang::trans.KeepMeLoggedIn') }}--}}
+{{--                                    </label>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
 
 {{--                            <div class="field-wrapper">--}}
 {{--                                <a href="auth_pass_recovery.html" class="forgot-pass-link">{{ __('Auth-Lang::trans.ForgotPassword') }}</a>--}}
